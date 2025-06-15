@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CRUDMVVMQ22025.Views.MainView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:CRUDMVVMQ22025.Models"
+    Title="">
+    <VerticalStackLayout Padding="10" Spacing="10">
+        <Button Text="Agregar Empleado" />
+
+        <Grid
+            Margin="5,5,5,5"
+            ColumnDefinitions="*,*,*"
+            RowDefinitions="Auto">
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Text="Nombre"
+                VerticalTextAlignment="Center" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Text="Direccion"
+                VerticalTextAlignment="Center" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="2"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Text="Correo Electronico"
+                VerticalTextAlignment="Center" />
+
+        </Grid>
+
+        <CollectionView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Empleado">
+                    <Grid RowSpacing="0" RowDefinitions="Auto" ColumnDefinitions="*,*,*">
+                        <Label Text="" Grid.Row="1" Grid.Column="0"/>
+                        <Label Text="" Grid.Row="1" Grid.Column="1"/>
+                        <Label Text="" Grid.Row="1" Grid.Column="2"/>
+                    </Grid>
+                    
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

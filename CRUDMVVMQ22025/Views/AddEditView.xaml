@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CRUDMVVMQ22025.Views.AddEditView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModel="clr-namespace:CRUDMVVMQ22025.Views"
+    x:DataType="viewModel:AddEditView"
+    Title="">
+    <VerticalStackLayout Padding="30" Spacing="5">
+        <Label Text="Nombre Completo:" />
+        <Entry Keyboard="Text" Text="" />
+
+        <Label Text="Dirección:" />
+        <Entry Keyboard="Text" Text="" />
+
+        <Label Text="Correo Electrónico:" />
+        <Entry Keyboard="Email" Text="" />
+
+        <Button Background="Green" Text="Guardar" />
+
+    </VerticalStackLayout>
+</ContentPage>
