@@ -4,9 +4,11 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:model="clr-namespace:CRUDMVVMQ22025.Models"
-    Title="">
+    xmlns:viewModel="clr-namespace:CRUDMVVMQ22025.ViewModels"
+    Title=""
+    x:DataType="viewModel:MainViewModel">
     <VerticalStackLayout Padding="10" Spacing="10">
-        <Button Text="Agregar Empleado" />
+        <Button Command="{Binding GoToAddEditViewCommand}" Text="Agregar Empleado" />
 
         <Grid
             Margin="5,5,5,5"
@@ -40,12 +42,24 @@
         <CollectionView>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Empleado">
-                    <Grid RowSpacing="0" RowDefinitions="Auto" ColumnDefinitions="*,*,*">
-                        <Label Text="" Grid.Row="1" Grid.Column="0"/>
-                        <Label Text="" Grid.Row="1" Grid.Column="1"/>
-                        <Label Text="" Grid.Row="1" Grid.Column="2"/>
+                    <Grid
+                        ColumnDefinitions="*,*,*"
+                        RowDefinitions="Auto"
+                        RowSpacing="0">
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Text="" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Text="" />
                     </Grid>
-                    
+
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
